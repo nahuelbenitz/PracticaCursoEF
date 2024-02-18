@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace MiMinimalAPI.Models
 {
@@ -16,7 +17,7 @@ namespace MiMinimalAPI.Models
 
         public int Peso { get; set; }
 
-
+        [JsonIgnore]
         public virtual ICollection<Tarea> Tareas { get; set; }
     }
 }
